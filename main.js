@@ -1,15 +1,15 @@
 const heapSort = a => {
     buildMaxHeap(a);
-    for (let i = a.length - 1; i >= 0; i--) {
-        swap(a, 0, i);
-        maxHeapify(a, 0, i);
+    for (let len = a.length - 1; len >= 0; len--) {
+        swap(a, 0, len);
+        maxHeapify(a, 0, len);
     }
 };
 
 const buildMaxHeap = a => {
     const lastParentIndex = Math.floor(a.length / 2) - 1;
-    for (let i = lastParentIndex; i >= 0; i--) {
-        maxHeapify(a, i, a.length);
+    for (let p = lastParentIndex; p >= 0; p--) {
+        maxHeapify(a, p, a.length);
     }
 };
 
