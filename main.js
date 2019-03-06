@@ -6,10 +6,10 @@ const heapSort = a => {
     }
 };
 
-const buildMaxHeap = tree => {
-    const lastParentIndex = Math.floor(tree.length / 2) - 1;
+const buildMaxHeap = a => {
+    const lastParentIndex = Math.floor(a.length / 2) - 1;
     for (let i = lastParentIndex; i >= 0; i--) {
-        maxHeapify(tree, i, tree.length);
+        maxHeapify(a, i, a.length);
     }
 };
 
